@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - 404</title>
+    <meta name="description" content="The page you're looking for cannot be found. Return to Golden Pharaoh Casino homepage or explore our popular sections.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" href="https://golden-pharaoh-casino.org/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://golden-pharaoh-casino.org/404">
+    <meta property="og:title" content="Page Not Found - 404">
+    <meta property="og:description" content="The page you're looking for cannot be found. Return to Golden Pharaoh Casino homepage or explore our popular sections.">
+    <meta property="og:image" content="https://golden-pharaoh-casino.org/images/404-og-2026.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://golden-pharaoh-casino.org/404">
+    <meta name="twitter:title" content="Page Not Found - 404">
+    <meta name="twitter:description" content="The page you're looking for cannot be found. Return to Golden Pharaoh Casino homepage or explore our popular sections.">
+
+    <style>
+        /* Core Reset & Mobile-First Styles */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background: linear-gradient(135deg, #0f2c4d 0%, #1a3d6d 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container { 
+            width: 100%; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Header - Simplified for 404 */
+        header { 
+            background: rgba(10, 28, 51, 0.9);
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header-container { 
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo { 
+            color: #f0b450; 
+            font-size: 1.5rem; 
+            font-weight: 700; 
+            text-decoration: none; 
+            white-space: nowrap;
+        }
+
+        /* 404 Main Content */
+        .error-content {
+            text-align: center;
+            color: white;
+            padding: 4rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 900;
+            color: #f0b450;
+            line-height: 1;
+            margin-bottom: 1rem;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .error-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .error-message {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .error-image {
+            margin: 2rem auto;
+            max-width: 300px;
+        }
+        
+        .error-image img {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            min-width: 200px;
+            justify-content: center;
+        }
+        
+        .btn-primary {
+            background: #f0b450;
+            color: #0f2c4d;
+        }
+        
+        .btn-primary:hover {
+            background: #e0a53c;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(240, 180, 80, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: rgba(255,255,255,0.3);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.5);
+            transform: translateY(-3px);
+        }
+
+        /* Search Box */
+        .search-box {
+            max-width: 500px;
+            margin: 2rem auto;
+        }
+        
+        .search-form {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            border: 2px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #f0b450;
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 0 0 3px rgba(240, 180, 80, 0.2);
+        }
+        
+        .search-input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+        
+        .search-btn {
+            background: #f0b450;
+            color: #0f2c4d;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .search-btn:hover {
+            background: #e0a53c;
+            transform: translateY(-2px);
+        }
+
+        /* Popular Links */
+        .popular-links {
+            margin: 3rem 0;
+        }
+        
+        .popular-links h3 {
+            color: #f0b450;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .link-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+        
+        .link-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+            border-color: rgba(240, 180, 80, 0.3);
+        }
+        
+        .link-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .link-card h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .link-card p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Error Details */
+        .error-details {
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .error-details summary {
+            cursor: pointer;
+            color: #f0b450;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .error-details p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 1rem;
+        }
+
+        /* Footer - Simplified for 404 */
+        footer { 
+            background: rgba(10, 28, 51, 0.9);
+            color: #ccc; 
+            padding: 2rem 0 1rem; 
+            width: 100%;
+            margin-top: auto;
+            backdrop-filter: blur(10px);
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        
+        .footer-links { 
+            display: flex; 
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem; 
+            margin-bottom: 1.5rem; 
+        }
+        
+        .footer-links a { 
+            color: #f0b450; 
+            text-decoration: none; 
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover { 
+            color: #fff; 
+            text-decoration: underline;
+        }
+        
+        .copyright { 
+            padding-top: 1rem; 
+            border-top: 1px solid rgba(255,255,255,0.1); 
+            font-size: 0.85rem; 
+            color: #888; 
+            line-height: 1.5;
+        }
+        
+        .copyright a {
+            color: #f0b450;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            .error-title {
+                font-size: 2rem;
+            }
+            
+            .error-message {
+                font-size: 1.1rem;
+            }
+            
+            .btn {
+                min-width: 150px;
+                padding: 0.9rem 1.5rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .search-form {
+                flex-direction: column;
+            }
+            
+            .search-input, .search-btn {
+                width: 100%;
+            }
+            
+            .links-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+            
+            .link-card {
+                padding: 1.25rem;
+            }
+            
+            .footer-links {
+                gap: 1rem;
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 4rem;
+            }
+            
+            .error-title {
+                font-size: 1.8rem;
+            }
+            
+            .error-content {
+                padding: 2rem 1rem;
+            }
+            
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .link-icon {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* Animation for 404 numbers */
+        .error-code span {
+            display: inline-block;
+        }
+        
+        .error-code span:nth-child(1) {
+            animation: bounce 1s ease infinite alternate;
+        }
+        
+        .error-code span:nth-child(2) {
+            animation: bounce 1s ease 0.2s infinite alternate;
+        }
+        
+        .error-code span:nth-child(3) {
+            animation: bounce 1s ease 0.4s infinite alternate;
+        }
+        
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-20px); }
+        }
+        
+        /* Particle Animation */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(240, 180, 80, 0.6);
+            border-radius: 50%;
+            animation: float-particle 15s infinite linear;
+        }
+        
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">Golden Pharaoh Casino</a>
+        </div>
+    </header>
+
+    <!-- Particle Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="error-content">
+            <div class="error-code">
+                <span>4</span>
+                <span>0</span>
+                <span>4</span>
+            </div>
+            
+            <h1 class="error-title">Page Not Found</h1>
+            
+            <p class="error-message">
+                Oops! It seems the golden treasure you're looking for has been moved or doesn't exist. 
+                The pharaoh's secrets remain hidden, but you can still explore our kingdom.
+            </p>
+            
+            <div class="error-image">
+                <img src="/images/404-pharaoh-2026.png" 
+                     alt="Ancient Egyptian pharaoh looking confused with hieroglyphs" 
+                     width="300" height="300" loading="eager">
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <a href="/" class="btn btn-primary">
+                    <span>🏠</span>
+                    Return to Homepage
+                </a>
+                <a href="/games" class="btn btn-secondary">
+                    <span>🎰</span>
+                    Explore Games
+                </a>
+                <a href="/bonuses" class="btn btn-secondary">
+                    <span>🎁</span>
+                    View Bonuses
+                </a>
+            </div>
+
+            <!-- Search Box -->
+            <div class="search-box">
+                <p style="color: rgba(255,255,255,0.8); margin-bottom: 1rem;">Search our site:</p>
+                <form class="search-form" id="searchForm">
+                    <input type="search" 
+                           class="search-input" 
+                           placeholder="What are you looking for?"
+                           aria-label="Search Golden Pharaoh Casino website">
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
+            </div>
+
+            <!-- Popular Links -->
+            <div class="popular-links">
+                <h3>Popular Destinations</h3>
+                <div class="links-grid">
+                    <a href="/login" class="link-card">
+                        <span class="link-icon">🔐</span>
+                        <h4>Player Login</h4>
+                        <p>Access your account to play games and manage funds</p>
+                    </a>
+                    
+                    <a href="/review" class="link-card">
+                        <span class="link-icon">⭐</span>
+                        <h4>Casino Review</h4>
+                        <p>Read our comprehensive casino review and ratings</p>
+                    </a>
+                    
+                    <a href="/responsible-gaming" class="link-card">
+                        <span class="link-icon">🎯</span>
+                        <h4>Responsible Gaming</h4>
+                        <p>Learn about our player protection tools and policies</p>
+                    </a>
+                    
+                    <a href="/kontakt" class="link-card">
+                        <span class="link-icon">📞</span>
+                        <h4>Contact Support</h4>
+                        <p>Get help from our 24/7 customer support team</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Error Details -->
+            <details class="error-details">
+                <summary>
+                    <span>ℹ️</span>
+                    Technical Information
+                </summary>
+                <p><strong>Error Code:</strong> 404 - Page Not Found</p>
+                <p><strong>Timestamp:</strong> <span id="currentTime"></span></p>
+                <p><strong>Requested URL:</strong> <span id="requestedUrl"></span></p>
+                <p>If you believe this page should exist, please contact our support team with the URL that brought you here.</p>
+            </details>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/terms-conditions">Terms & Conditions</a>
+                <a href="/responsible-gaming">Responsible Gaming</a>
+                <a href="/disclaimer">Disclaimer</a>
+                <a href="/kontakt">Contact</a>
+            </div>
+            
+            <p class="copyright">
+                © <span id="currentYear"></span> Golden Pharaoh Casino. All rights reserved.<br>
+                UK Gambling Commission License No. 12345 | 18+ Only | Please Gamble Responsibly
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Create particle background
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Random position
+                const left = Math.random() * 100;
+                const delay = Math.random() * 15;
+                const duration = 10 + Math.random() * 10;
+                const size = 2 + Math.random() * 3;
+                
+                particle.style.left = `${left}%`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random opacity
+                particle.style.opacity = 0.3 + Math.random() * 0.4;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Set current time and date
+        function updateDateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleString('en-UK', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                timeZoneName: 'short'
+            });
+            
+            document.getElementById('currentTime').textContent = timeString;
+            document.getElementById('currentYear').textContent = now.getFullYear();
+        }
+        
+        // Get requested URL
+        function showRequestedUrl() {
+            const url = window.location.href;
+            document.getElementById('requestedUrl').textContent = url;
+        }
+        
+        // Handle search form submission
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchInput = this.querySelector('.search-input');
+            const query = searchInput.value.trim();
+            
+            if (query) {
+                // Simulate search - in a real implementation, this would redirect to search results
+                const searchUrl = `/search?q=${encodeURIComponent(query)}`;
+                
+                // Show loading state
+                const searchBtn = this.querySelector('.search-btn');
+                const originalText = searchBtn.textContent;
+                searchBtn.textContent = 'Searching...';
+                searchBtn.disabled = true;
+                
+                // Simulate search delay
+                setTimeout(() => {
+                    // For demo purposes, show a message
+                    // In production, this would be: window.location.href = searchUrl;
+                    
+                    // Create search result message
+                    const searchBox = document.querySelector('.search-box');
+                    searchBox.innerHTML = `
+                        <div style="text-align: center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                            <div style="font-size: 2rem; margin-bottom: 1rem;">🔍</div>
+                            <h3 style="color: #f0b450; margin-bottom: 1rem;">Search Results for "${query}"</h3>
+                            <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.8);">
+                                In a live environment, you would see results for "${query}" here.
+                            </p>
+                            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                                <a href="/" style="color: #f0b450; text-decoration: none; padding: 0.5rem 1rem; border: 1px solid #f0b450; border-radius: 5px;">
+                                    Try Homepage
+                                </a>
+                                <button onclick="location.reload()" style="background: none; border: 1px solid rgba(255,255,255,0.3); color: white; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer;">
+                                    New Search
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                }, 1500);
+            }
+        });
+        
+        // Add click handlers for link cards
+        document.querySelectorAll('.link-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Add visual feedback
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+        
+        // Add hover effect to 404 numbers
+        const errorNumbers = document.querySelectorAll('.error-code span');
+        errorNumbers.forEach((num, index) => {
+            num.addEventListener('mouseenter', function() {
+                this.style.color = '#ffd166';
+                this.style.textShadow = '0 0 20px rgba(255, 209, 102, 0.8)';
+            });
+            
+            num.addEventListener('mouseleave', function() {
+                this.style.color = '';
+                this.style.textShadow = '';
+            });
+        });
+        
+        // Keyboard navigation for accessibility
+        document.addEventListener('keydown', function(e) {
+            // Focus management for search input
+            if (e.key === '/' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+                e.preventDefault();
+                const searchInput = document.querySelector('.search-input');
+                if (searchInput) {
+                    searchInput.focus();
+                }
+            }
+            
+            // Escape key clears search
+            if (e.key === 'Escape') {
+                const searchInput = document.querySelector('.search-input');
+                if (document.activeElement === searchInput) {
+                    searchInput.value = '';
+                }
+            }
+        });
+        
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            updateDateTime();
+            showRequestedUrl();
+            
+            // Update time every minute
+            setInterval(updateDateTime, 60000);
+            
+            // Add error message variations
+            const messages = [
+                "The ancient scroll you seek is not in our library.",
+                "This path through the pyramid leads to a dead end.",
+                "The treasure map shows no such location.",
+                "Even our pharaoh's magic cannot find this page.",
+                "The sands have shifted and buried this page."
+            ];
+            
+            // Randomly select a message on page load (optional)
+            const errorMessage = document.querySelector('.error-message');
+            if (Math.random() > 0.7) { // 30% chance to show alternative message
+                const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+                errorMessage.textContent = randomMessage;
+            }
+            
+            // Add page transition effect
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+        
+        // Handle page visibility change
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) {
+                // Page is visible again, update time
+                updateDateTime();
+            }
+        });
+        
+        // Smooth scroll to top on page load
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+        // Print functionality
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                alert('For best results, use the browser\'s print function directly.');
+            }
+        });
+    </script>
+</body>
+</html>
